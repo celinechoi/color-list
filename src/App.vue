@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <SafeHeader></SafeHeader>
-    <SafeList></SafeList>
-    <SafeFooter></SafeFooter>
-  </div>
+	<div id="app">
+		<SafeHeader></SafeHeader>
+		<SafeList></SafeList>
+		<SafeFooter></SafeFooter>
+	</div>
 </template>
 
 <script>
@@ -12,12 +12,12 @@ import SafeList from './components/SafeList';
 import SafeFooter from './components/SafeFooter';
 
 export default {
-  name: 'App',
-  components: {
-    SafeHeader,
-    SafeList,
-    SafeFooter,
-  },
+	name: 'App',
+	components: {
+		SafeHeader,
+		SafeList,
+		SafeFooter,
+	},
 };
 </script>
 

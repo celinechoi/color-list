@@ -1,7 +1,7 @@
 <template>
-  <footer class="footer">
-    <p>CopyRight JSCHOI.</p>
-  </footer>
+	<footer class="footer">
+		<p>CopyRight JSCHOI.</p>
+	</footer>
 </template>
 
 <script>
