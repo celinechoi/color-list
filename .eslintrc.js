@@ -5,8 +5,9 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:vue/essential',
-    'prettier',
     'plugin:prettier/recommended',
+    'plugin:javascript/browser',
+    'prettier',
   ],
   // 코드 정리 플러그인 추가 
   plugins: ['prettier'],
@@ -32,5 +33,14 @@ module.exports = {
   "env": {
     "node": true,
     "browser": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+    }
   }
 };
