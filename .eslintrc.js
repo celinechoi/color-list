@@ -23,9 +23,13 @@ module.exports = {
         trailingComma: 'all',
         printWidth: 80,
         bracketSpacing: true,
-        arrowParens: 'avoid',
+        //arrowParens: 'avoid',
+        jsxBracketSameLine: true
       },
     ],
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    //'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
   },
+  "env": {
+    node: true
+  }
 };
