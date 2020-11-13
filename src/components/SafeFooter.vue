@@ -1,6 +1,6 @@
 <template>
 	<footer class="footer">
-		<p>CopyRight JSCHOI.</p>
+		<p class="copyright">CopyRight JSCHOI.</p>
 	</footer>
 </template>
 

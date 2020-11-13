@@ -130,5 +130,11 @@ ul.frame-contents {
 
 .footer {
   margin-top: auto;
-  background-color: $color-dark-white;
+  @include spacing;
+  background-color: $color-gray-0-0-5;
+  p.copyright {
+    color: $color-gray-0-4;
+    letter-spacing: 0;
+    font-weight: 700;
+  }
 }
