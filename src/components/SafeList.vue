@@ -1,16 +1,16 @@
 <template>
 	<div class="contents">
-		<ul class="list-frame">
-			<li class="list-frame__header">
-				<div class="list-frame__title">식당명</div>
-				<div class="list-frame__place01">시도명</div>
-				<div class="list-frame__place02">시군구명</div>
-			</li>
-			<li class="list-frame__contents">
-				<a href="javascript:;" class="list-frame__link">
-					<div class="list-frame__title">식당명_</div>
-					<div class="list-frame__place01">시도명_</div>
-					<div class="list-frame__place02">시군구명_</div>
+		<ul class="frame-header">
+			<li class="frame-header__title">식당명</li>
+			<li class="frame-header__place01">시도명</li>
+			<li class="frame-header__place02">시군구명</li>
+		</ul>
+		<ul class="frame-contents">
+			<li class="frame-contents__list">
+				<a href="javascript:;" class="frame-contents__link">
+					<div class="frame-contents__title">식당명_</div>
+					<div class="frame-contents__place01">시도명_</div>
+					<div class="frame-contents__place02">시군구명_</div>
 				</a>
 			</li>
 		</ul>

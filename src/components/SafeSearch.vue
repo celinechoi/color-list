@@ -2,7 +2,9 @@
 	<div class="search-box">
 		<div class="search-box__inner">
 			<input type="text" class="search-box__input" />
-			<a href="javascript:;" class="search-box__button">검색</a>
+			<a href="javascript:;" class="search-box__button">
+				<ion-icon name="search-outline"></ion-icon>
+			</a>
 		</div>
 	</div>
 </template>

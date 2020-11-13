@@ -14,7 +14,7 @@ body {
 }
 
 html, body, a, p {
-  color: $color-black;
+  color: rgba(0, 0, 0, 0.7);
   letter-spacing: -1.5px;
 }
 
@@ -32,12 +32,17 @@ input, textarea {
   }
 }
 // #custom = BEM, Nesting
+#app {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
 .header {
   background-color: $color-light-yellow;
   @include spacing;
   text-align: center;
   .logo {
-    color: $color-medium-gray;
     @include title-txt;
   }
 }
@@ -46,12 +51,15 @@ input, textarea {
   text-align: center;
   .search-box__inner {
     padding: 2%;
-    background-color: $color-beige;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.08);
     @include border-radius-05;
     .search-box__input {
       width: calc(100% - 45px - 10px);
       height: 35px;
-      background-color: $color-beige-light-gray;
+      background-color: transparent;
       @include border-radius-05;
     }
     .search-box__button {
@@ -59,14 +67,13 @@ input, textarea {
       width: 45px;
       height: 35px;
       margin-left: 10px;
-      background-color: $color-dark-beige;
       @include border-radius-05;
-      color: #333;
+      color: $color-gray;
       text-align: center;
       line-height: 35px;
       font: {
         weight: 700;
-        size: 1.3rem;
+        size: 2rem;
       }
     }
   }
@@ -75,26 +82,53 @@ input, textarea {
 .contents {
   @include spacing;
 }
-
-ul.list-frame {
+ul.frame-header {
   overflow: hidden;
+  padding: 2%;
+  background-color: $color-gray-0-0-5;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.08);
   li {
-    overflow: hidden;
-    div {
-      float: left;
+    float: left;
+    width: calc(100%/3);
+    font: {
+      size: 1.7rem;
+      weight: 500;
     }
+    line-height: 2.4rem;
+    text-align: center;
   }
-  li.list-frame__header {
-    padding: 2%;
-    background-color: $color-light-gray;
-    div {
-      width: calc(100%/3);
-      font: {
-        size: 1.7rem;
-        weight: 500;
+}
+
+ul.frame-contents {
+  li.frame-contents__list {
+    border: {
+      bottom: {
+        width: 1px;
+        style: solid;
+        color: $color-gray-0-1;
       }
-      text-align: center;
-      line-height: 2.4rem;
+    }
+    a.frame-contents__link {
+      display: block;
+      overflow: hidden;
+      padding: 2%;
+      div {
+        float: left;
+        width: calc(100%/3);
+        font: {
+          size: 1.5rem;
+        }
+        text-align: center;
+        line-height: 2.5rem;
+      }
     }
   }
+}
+
+.footer {
+  margin-top: auto;
+  background-color: $color-dark-white;
 }
