@@ -1,6 +1,7 @@
 <template>
 	<div id="app">
 		<SafeHeader></SafeHeader>
+		<SafeSearch></SafeSearch>
 		<SafeList></SafeList>
 		<SafeFooter></SafeFooter>
 	</div>
@@ -8,6 +9,7 @@
 
 <script>
 import SafeHeader from './components/SafeHeader';
+import SafeSearch from './components/SafeSearch';
 import SafeList from './components/SafeList';
 import SafeFooter from './components/SafeFooter';
 
@@ -17,6 +19,7 @@ export default {
 		SafeHeader,
 		SafeList,
 		SafeFooter,
+		SafeSearch,
 	},
 };
 </script>

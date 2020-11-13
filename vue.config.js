@@ -9,4 +9,8 @@ module.exports = {
 			},
 		},
 	},
+	// ESLint 에러 화면에 표시되지 않게 하는 방법
+	devServer: {
+		overlay: false,
+	},
 };
