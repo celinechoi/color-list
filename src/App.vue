@@ -25,7 +25,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import 'http://fonts.googleapis.com/earlyaccess/notosanskr.css';
+@import '~vue-ionicons/ionicons.scss';
 @import './assets/styles/reset.css';
 @import './assets/styles/style.scss';
 </style>

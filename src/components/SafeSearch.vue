@@ -3,14 +3,20 @@
 		<div class="search-box__inner">
 			<input type="text" class="search-box__input" />
 			<a href="javascript:;" class="search-box__button">
-				<ion-icon name="search-outline"></ion-icon>
+				<IosSearchIcon></IosSearchIcon>
 			</a>
 		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+import IosSearchIcon from 'vue-ionicons/dist/ios-search.vue';
+export default {
+	name: 'SafeSearch',
+	components: {
+		IosSearchIcon,
+	},
+};
 </script>
 
 <style></style>

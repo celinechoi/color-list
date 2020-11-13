@@ -50,5 +50,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   * node-sass@5.0.0
   * sass-loader@10.1.0
   * vue@2.6.12
+  * vue-ionicons@3.0.5
+  * vue-router@3.4.9
   * vue-template-compiler@2.6.12
   * vuex@3.5.1
