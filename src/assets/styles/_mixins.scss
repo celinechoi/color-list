@@ -1,10 +1,19 @@
 // #text
 @mixin title-txt {
   font: {
-    size: 2.5rem;
+    size: 3.5rem;
     weight: 700;
   }
-  line-height: 3rem;
+  line-height: 4rem;
+}
+
+@mixin title-h2-txt {
+  font: {
+    size: 3rem;
+    weight: 700;
+  }
+  line-height: 4.5rem;
+  text-align: center;
 }
 
 // #spacing

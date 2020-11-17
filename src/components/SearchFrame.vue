@@ -12,7 +12,7 @@
 <script>
 import IosSearchIcon from 'vue-ionicons/dist/ios-search.vue';
 export default {
-	name: 'SafeSearch',
+	name: 'SearchFrame',
 	components: {
 		IosSearchIcon,
 	},
