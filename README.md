@@ -1,5 +1,6 @@
-# safe-restaurant
-전국 안심식당 리스트 조회 프로젝트
+# 가상 데이터 통신 리스트
+Fake data를 통해 axios 통신을 하여 리스트 형식으로 데이터 가공
+데이터 출처 : [REQ|RES](https://reqres.in/).
 
 ## Project setup
 ```
