@@ -41,7 +41,6 @@ export default {
 					const dataTxt = res.data;
 					this.users = dataTxt.data;
 					this.totalPage = dataTxt.total_pages;
-					console.log(res);
 				})
 				.catch(err => {
 					console.log(err);
