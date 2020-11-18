@@ -3,27 +3,44 @@
 */
 
 // ##mobile & tablet
-@media all and (max-width: 1024px) {
+@include responsive(mobileTablet) {
   .search-box {
     .search-box__inner {
       width: 100%;
+      padding: 2%;
     }
   }
 }
-
 // ##mobile
-@media all and (max-width:767px) {
+@include responsive(mobile) {
 
 }
-
 // ##tablet
-@media all and (min-width:768px) and (max-width:1024px) {
-.contents {
-  ul.frame-contents {
-    width: 100%;
+@include responsive(tablet) {
+  .contents {
+    ul.frame-contents {
+      width: 100%;
+      li.frame-contents__page {
+        padding: 1% 1.5%;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+  .search-box {
+    .search-box__inner {
+      .search-box__button {
+        .ion {
+          font-size: 3.3rem;
+        }
+      }
+    }
+  }
+  .footer {
+    p.copyright {
+      font-size: 1.3rem;
+    }
   }
 }
-}
-
 // ##pc
-@media all and (min-width:1025px) {}
+@include responsive(pc);

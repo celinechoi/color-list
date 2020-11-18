@@ -21,6 +21,10 @@ html, body, a, p {
   letter-spacing: -1.5px;
 }
 
+html, body, div, p {
+  box-sizing: border-box;
+}
+
 a, span {
   vertical-align: middle;
 }
@@ -47,6 +51,7 @@ input, textarea {
   text-align: center;
   .logo {
     @include title-txt;
+    line-height: initial;
   }
 }
 .search-box {

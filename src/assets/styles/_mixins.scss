@@ -2,6 +2,28 @@
 +_mixins.scss
 */
 
+// #media query
+$medium-page: 767px;
+$wide-page: 1024px;
+@mixin responsive($media) {
+  @if $media == mobileTablet {
+    @media all and (min-width: $medium-page) and (max-width: $wide-page) {
+      @content;
+    }
+  }
+  @else if $media == mobile {
+    @media all and (max-width: $medium-page) { @content; }
+  }
+  @else if $media == tablet {
+    @media all and (min-width: $medium-page + 1) and (max-width: $wide-page) {
+      @content;
+    }
+  }
+  @else if $media == pc {
+    @media all and (max-width: $wide-page + 1) { @content; }
+  }
+}
+
 // #text
 @mixin title-txt {
   font: {
@@ -9,6 +31,12 @@
     weight: 700;
   }
   line-height: 4rem;
+  @include responsive(mobile) {
+    font: {
+      size: 2.5rem;
+    }
+    line-height: 3rem;
+  }
 }
 
 @mixin title-h2-txt {
