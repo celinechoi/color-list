@@ -9,8 +9,10 @@
 		<ul class="frame-contents">
 			<li class="frame-contents__list" v-for="(user, idx) in users" :key="idx">
 				<a href="javascript:;" class="frame-contents__link">
-					<img :src="`${user.avatar}`" alt="" />
-					<p>{{ user.first_name }}</p>
+					<div class="img-box">
+						<img :src="`${user.avatar}`" alt="사용자 프로필 사진" />
+					</div>
+					<p>{{ user.last_name }}</p>
 				</a>
 			</li>
 		</ul>
@@ -41,6 +43,7 @@ export default {
 					const dataTxt = res.data;
 					this.users = dataTxt.data;
 					this.totalPage = dataTxt.total_pages;
+					console.log(res);
 				})
 				.catch(err => {
 					console.log(err);

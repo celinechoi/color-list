@@ -117,6 +117,32 @@ input, textarea {
           color: $color-gray-0-1;
         }
         @include border-radius-05;
+        &:hover {
+          border: {
+            width: 1px;
+            style: solid;
+            color: $color-dark-beige;
+          }
+          background-color: $color-light-yellow;
+          .img-box {
+            img {
+              border: {
+                color: $color-dark-beige;
+              }
+            }
+          }
+        }
+        .img-box {
+          img {
+            border: {
+              width: 1px;
+              style: solid;
+              color: $color-gray-0-1;
+            }
+            box-sizing: initial;
+            @include border-radius-05;
+          }
+        }
         p {
           padding-top: 10%;
           font: {
