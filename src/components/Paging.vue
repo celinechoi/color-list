@@ -21,7 +21,6 @@ export default {
 	methods: {
 		movePage(page) {
 			// 이벤트 부모 컴포넌트로 올리기
-			alert('이벤트 동작');
 			this.$emit('movePage', page);
 		},
 	},
