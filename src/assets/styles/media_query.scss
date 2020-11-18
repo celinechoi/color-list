@@ -1,0 +1,29 @@
+/*
+#media_query.scss : media query for mobile, tablet, pc
+*/
+
+// ##mobile & tablet
+@media all and (max-width: 1024px) {
+  .search-box {
+    .search-box__inner {
+      width: 100%;
+    }
+  }
+}
+
+// ##mobile
+@media all and (max-width:767px) {
+
+}
+
+// ##tablet
+@media all and (min-width:768px) and (max-width:1024px) {
+.contents {
+  ul.frame-contents {
+    width: 100%;
+  }
+}
+}
+
+// ##pc
+@media all and (min-width:1025px) {}

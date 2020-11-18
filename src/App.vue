@@ -29,4 +29,5 @@ export default {
 @import '~vue-ionicons/ionicons.scss';
 @import './assets/styles/reset.css';
 @import './assets/styles/style.scss';
+@import './assets/styles/media_query.scss';
 </style>

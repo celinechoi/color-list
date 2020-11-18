@@ -1,5 +1,8 @@
-// #base setting
+/*
+#style.scss : base setting and BEM, Nesting style
+*/
 
+// ##base setting
 html {
   font-size: 62.5%;
 }
@@ -31,7 +34,7 @@ input, textarea {
     width: 0;
   }
 }
-// #custom = BEM, Nesting
+// ##custom = BEM, Nesting
 #app {
   display: flex;
   height: 100vh;
@@ -119,12 +122,19 @@ input, textarea {
       }
     }
     li.frame-contents__page {
-      display: inline-block;
-      color: $color-black;
+      margin: auto 8px;
+      padding: 1%;
+      cursor: pointer;
+      color: $color-medium-gray;
       font: {
         weight: 700;
       }
     }
+  }
+  ul.paging {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
   }
 }
 // ul.frame-header {

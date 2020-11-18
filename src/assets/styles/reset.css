@@ -1,11 +1,10 @@
 /*
-* Author : jschoi
-* title : base css setting
+#reset.css : reset css setting
 */
-/* ---------------------- font ---------------------- */
-html{font-family:'Noto Sans KR'}
-/* ---------------------- reset ---------------------- */
-html,body{width:100%;height:100%}body,div,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,button,input{margin:0;padding:0}body,h1,h2,h3,h4,h5,input,button{font-weight:300;}ul,li,ol{list-style:none}fieldset,iframe,img{border:0}img{max-width:100%;vertical-align:middle}table{border-collapse:collapse}a{text-decoration:none}.skip-navigation a{position:absolute;left:0;top:-9999px}.skip-navigation a:focus{display:block;top:0;width:100%;font-weight:700;background:#f0f0f0;color:#000;text-align:center;z-index:150}.blind{position:absolute;left:0;top:-9999px}
 
-/* ---------------------- form ---------------------- */
+/* ##font */
+html{font-family:'Noto Sans KR'}
+/* ##reset */
+html,body{width:100%;height:100%}body,div,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,button,input{margin:0;padding:0}body,h1,h2,h3,h4,h5,input,button{font-weight:300;}ul,li,ol{list-style:none}fieldset,iframe,img{border:0}img{max-width:100%;vertical-align:middle}table{border-collapse:collapse}a{text-decoration:none}.skip-navigation a{position:absolute;left:0;top:-9999px}.skip-navigation a:focus{display:block;top:0;width:100%;font-weight:700;background:#f0f0f0;color:#000;text-align:center;z-index:150}.blind{position:absolute;left:0;top:-9999px}
+/* ##form */
 label{padding:0 5px;cursor:pointer;vertical-align:middle}input:disabled{background-color:#ddd}input{height:30px;padding:0 7px;vertical-align:middle;box-sizing:border-box}input[type="radio"],input[type="checkbox"]{margin:0 3px;vertical-align:middle}select{padding:0 7px;vertical-align:middle}textarea{padding:0 7px;box-sizing:border-box;vertical-align:middle}button{border:0;background-color:transparent;cursor:pointer}
