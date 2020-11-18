@@ -10,16 +10,10 @@
       padding: 2%;
     }
   }
-}
-// ##mobile
-@include responsive(mobile) {
-
-}
-// ##tablet
-@include responsive(tablet) {
   .contents {
     ul.frame-contents {
       width: 100%;
+
       li.frame-contents__page {
         padding: 1% 1.5%;
         font-size: 1.5rem;
@@ -27,6 +21,13 @@
       }
     }
   }
+}
+// ##mobile
+@include responsive(mobile) {
+
+}
+// ##tablet
+@include responsive(tablet) {
   .search-box {
     .search-box__inner {
       .search-box__button {

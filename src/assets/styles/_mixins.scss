@@ -7,12 +7,10 @@ $medium-page: 767px;
 $wide-page: 1024px;
 @mixin responsive($media) {
   @if $media == mobileTablet {
-    @media all and (min-width: $medium-page) and (max-width: $wide-page) {
-      @content;
-    }
+    @media all and (max-width: $wide-page) { @content; }
   }
   @else if $media == mobile {
-    @media all and (max-width: $medium-page) { @content; }
+    @media all and (min-width: $medium-page) { @content; }
   }
   @else if $media == tablet {
     @media all and (min-width: $medium-page + 1) and (max-width: $wide-page) {
@@ -30,12 +28,12 @@ $wide-page: 1024px;
     size: 3.5rem;
     weight: 700;
   }
-  line-height: 4rem;
-  @include responsive(mobile) {
+  line-height: 5rem;
+  @include responsive(mobileTablet) {
     font: {
-      size: 2.5rem;
+      size: 3rem;
     }
-    line-height: 3rem;
+    line-height: 4.5rem;
   }
 }
 
@@ -46,6 +44,12 @@ $wide-page: 1024px;
   }
   line-height: 4.5rem;
   text-align: center;
+  @include responsive(mobileTablet) {
+    font: {
+      size: 2.5rem;
+    }
+    line-height: 4rem;
+  }
 }
 
 // #spacing
