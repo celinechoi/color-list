@@ -14,7 +14,8 @@
 				</a>
 			</li>
 		</ul>
-		<Paging: totalPage="totalPage" @movePage="movePage" />
+		<Paging :totalPage="totalPage" @movePage="movePage" />
+		<!-- @movePage는 자식 컴포넌트로 부터 받은 이벤트, "movePage"는 여기 컴포넌트의 메서드 실행. -->
 	</div>
 </template>
 
@@ -22,6 +23,9 @@
 import axios from 'axios';
 import Paging from './Paging';
 export default {
+	components: {
+		Paging,
+	},
 	data() {
 		return {
 			users: null,
@@ -32,12 +36,13 @@ export default {
 	methods: {
 		fetchData(pageNum) {
 			axios
-				.get('https://reqres.in/api/users?page=' + this.pageNum)
+				.get('https://reqres.in/api/users?page=' + pageNum)
 				.then(res => {
 					const dataTxt = res.data;
 					this.users = dataTxt.data;
 					this.totalPage = dataTxt.total_pages;
-					console.log(dataTxt.data);
+					//console.log(pageNum);
+					//console.log(dataTxt.data);
 				})
 				.catch(err => {
 					console.log(err);
@@ -49,9 +54,6 @@ export default {
 	},
 	created() {
 		this.fetchData(this.pageNum);
-	},
-	components: {
-		Paging,
 	},
 };
 </script>

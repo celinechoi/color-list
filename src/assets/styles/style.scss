@@ -52,7 +52,7 @@ input, textarea {
   .search-box__inner {
     width: 50%;
     margin: 0 auto;
-    padding: 2%;
+    padding: 1%;
     -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
     0px 1px 3px 0px rgba(0, 0, 0, 0.08);
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
@@ -94,11 +94,9 @@ input, textarea {
     width: 50%;
     margin: 0 auto;
     li.frame-contents__list {
-      width: calc(100%/3);
       float: left;
-
+      width: calc(100%/3);
       @include border-radius-05;
-
       a.frame-contents__link {
         display: block;
         overflow: hidden;
@@ -118,6 +116,13 @@ input, textarea {
           text-align: center;
           line-height: 2.5rem;
         }
+      }
+    }
+    li.frame-contents__page {
+      display: inline-block;
+      color: $color-black;
+      font: {
+        weight: 700;
       }
     }
   }

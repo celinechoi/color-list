@@ -3,7 +3,6 @@
 		<HeaderFrame></HeaderFrame>
 		<SearchFrame></SearchFrame>
 		<ListFrame></ListFrame>
-		<Paging />
 		<FooterFrame></FooterFrame>
 	</div>
 </template>
@@ -20,7 +19,6 @@ export default {
 		HeaderFrame,
 		SearchFrame,
 		ListFrame,
-		Paging,
 		FooterFrame,
 	},
 };
