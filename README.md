@@ -1,5 +1,5 @@
-# 가상 데이터 통신 리스트
-Fake data를 통해 axios 통신을 하여 리스트 형식으로 데이터 가공
+# 가상 데이터 통신 리스트(Fake Data List)
+Fake data를 axios 통신 하여 리스트 형식으로 데이터 가공
 데이터 출처 : [REQ|RES](https://reqres.in/).
 
 ## Project setup
