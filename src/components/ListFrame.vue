@@ -22,15 +22,18 @@
 		</ul>
 		<Paging :totalPage="totalPage" @movePage="movePage" />
 		<!-- @movePage는 자식 컴포넌트로 부터 받은 이벤트, "movePage"는 여기 컴포넌트의 메서드 실행. -->
+		<ListPopup></ListPopup>
 	</div>
 </template>
 
 <script>
 import axios from 'axios';
 import Paging from './Paging';
+import ListPopup from './ListPopup';
 export default {
 	components: {
 		Paging,
+		ListPopup,
 	},
 	data() {
 		return {
