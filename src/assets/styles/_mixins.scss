@@ -69,3 +69,20 @@ $wide-page: 1024px;
     radius: 5px;
   }
 }
+
+// #gradient
+@mixin gradient-lightgreen-yellow {
+  background-color: $color-light-yellow;
+  background: -webkit-linear-gradient(left, $color-light-green, $color-light-yellow);
+  background: -moz-linear-gradient(left, $color-light-green, $color-light-yellow);
+  background: -o-linear-gradient(left, $color-light-green, $color-light-yellow);
+  background: linear-gradient(90deg, $color-light-green, $color-light-yellow);
+}
+
+@mixin gradient-rainbow {
+  background-color: $color-light-purple;
+  background: -webkit-linear-gradient(left, $color-red, $color-orange, $color-light-yellow, $color-light-green, $color-blue, $color-light-purple);
+  background: -moz-linear-gradient(left, $color-red, $color-orange, $color-light-yellow, $color-light-green, $color-blue, $color-light-purple);
+  background: -o-linear-gradient(left, $color-red, $color-orange, $color-light-yellow, $color-light-green, $color-blue, $color-light-purple);
+  background: linear-gradient(128deg, $color-red, $color-orange, $color-light-yellow, $color-light-green, $color-blue, $color-light-purple);
+}

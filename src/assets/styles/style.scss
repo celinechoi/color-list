@@ -38,6 +38,7 @@ input, textarea {
     width: 0;
   }
 }
+
 // ##custom = BEM, Nesting
 #app {
   display: flex;
@@ -46,12 +47,18 @@ input, textarea {
 }
 
 .header {
-  background-color: $color-light-yellow;
-  @include spacing;
+  padding: 2% 3%;
+  // @include gradient-lightgreen-yellow;
+  @include gradient-rainbow;
   text-align: center;
   .logo {
     @include title-txt;
     line-height: initial;
+    span {
+      .ion {
+        color: $color-orange;
+      }
+    }
   }
 }
 .search-box {
@@ -117,39 +124,38 @@ input, textarea {
           color: $color-gray-0-1;
         }
         @include border-radius-05;
-        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
-        0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+        // box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+        // 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .12),
+        0 1px 2px rgba(0, 0, 0, .24);
         &:hover {
-          border: {
-            width: 1px;
-            style: solid;
-            color: $color-beige;
-          }
-          background-color: $color-light-yellow;
-          .img-box {
-            img {
-              border: {
-                color: $color-beige;
-              }
-            }
-          }
+          background-color: $color-gray-0-0-5;
         }
-        .img-box {
-          img {
-            border: {
-              width: 1px;
-              style: solid;
-              color: $color-gray-0-1;
-            }
-            box-sizing: initial;
+        .line-box {
+          text-align: center;
+          .line {
+            display: inline-block;
+            width: 5px;
+            height: 26px;
+            background-color: $color-gray;
             @include border-radius-05;
+            transform: rotate(45deg) translate(0, 0);
+          }
+          .line.left {
+            transform: rotate(45deg) translate(-4px, -3px);
+          }
+          .line.center {
+            height: 36px;
+          }
+          .line.right {
+            transform: rotate(45deg) translate(4px, 3px);
           }
         }
         p {
-          padding-top: 10%;
+          padding-top: 5%;
           font: {
             size: 1.6rem;
-            weight: 500;
+            weight: 400;
           }
           text-align: center;
           line-height: 2.6rem;
@@ -195,7 +201,7 @@ input, textarea {
 
 .footer {
   margin-top: auto;
-  @include spacing;
+  padding: 1% 3%;
   background-color: $color-gray-0-0-5;
   p.copyright {
     color: $color-gray-0-4;

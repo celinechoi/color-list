@@ -1,6 +1,8 @@
 <template>
 	<header class="header">
-		<a href="javascript:;" class="logo"><span>가상 데이터 통신 리스트</span></a>
+		<a href="javascript:;" class="logo"
+			><span>컬러 리스트 <ios-brush-icon></ios-brush-icon></span
+		></a>
 	</header>
 </template>
 

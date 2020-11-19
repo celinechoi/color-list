@@ -5,18 +5,34 @@
 			<li class="frame-header__place01">시도명</li>
 			<li class="frame-header__place02">시군구명</li>
 		</ul> -->
-		<h2 class="list-title">users</h2>
+		<h2 class="list-title">colors</h2>
 		<ul class="frame-contents">
-			<li class="frame-contents__list" v-for="(user, idx) in users" :key="idx">
+			<li
+				class="frame-contents__list"
+				v-for="(product, idx) in products"
+				:key="idx"
+			>
 				<a href="javascript:;" class="frame-contents__link">
-					<div class="img-box">
-						<img
-							:src="`${user.avatar}`"
-							@error="imgUrlError"
-							alt="사용자 프로필 사진"
-						/>
+					<div class="line-box">
+						<span
+							:style="{ 'background-color': product.color }"
+							class="line left"
+						></span>
+						<span
+							:style="{ 'background-color': product.color }"
+							class="line center"
+						></span>
+						<span
+							:style="{ 'background-color': product.color }"
+							class="line right"
+						></span>
 					</div>
-					<p>{{ user.last_name }}</p>
+					<p>
+						color code_
+						<strong :style="{ color: product.color }">{{
+							product.color
+						}}</strong>
+					</p>
 				</a>
 			</li>
 		</ul>
@@ -37,7 +53,7 @@ export default {
 	},
 	data() {
 		return {
-			users: null,
+			products: null,
 			totalPage: null,
 			pageNum: 1,
 		};
@@ -45,19 +61,20 @@ export default {
 	methods: {
 		fetchData(pageNum) {
 			axios
-				.get('https://reqres.in/api/users?page=' + pageNum)
+				.get('https://reqres.in/api/products?page=' + pageNum)
 				.then(res => {
 					const dataTxt = res.data;
-					this.users = dataTxt.data;
+					this.products = dataTxt.data;
 					this.totalPage = dataTxt.total_pages;
+					console.log(res);
 				})
 				.catch(err => {
 					console.log(err);
 				});
 		},
-		imgUrlError(e) {
-			e.path[0].src = require('../assets/img/noimg.jpg');
-		},
+		// imgUrlError(e) { // 이미지 없을 경우 noimage show
+		// 	e.path[0].src = require('../assets/img/noimg.jpg');
+		// },
 		movePage(page) {
 			this.fetchData(page);
 		},
