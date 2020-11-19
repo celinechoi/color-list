@@ -24,7 +24,13 @@
 }
 // ##mobile
 @include responsive(mobile) {
-
+.contents {
+  ul.frame-contents {
+    li.frame-contents__list {
+      width: calc(100%/1);
+    }
+  }
+}
 }
 // ##tablet
 @include responsive(tablet) {

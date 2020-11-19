@@ -10,7 +10,11 @@
 			<li class="frame-contents__list" v-for="(user, idx) in users" :key="idx">
 				<a href="javascript:;" class="frame-contents__link">
 					<div class="img-box">
-						<img :src="`${user.avatar}`" alt="사용자 프로필 사진" />
+						<img
+							:src="`${user.avatar}`"
+							@error="imgUrlError"
+							alt="사용자 프로필 사진"
+						/>
 					</div>
 					<p>{{ user.last_name }}</p>
 				</a>
@@ -43,11 +47,13 @@ export default {
 					const dataTxt = res.data;
 					this.users = dataTxt.data;
 					this.totalPage = dataTxt.total_pages;
-					console.log(res);
 				})
 				.catch(err => {
 					console.log(err);
 				});
+		},
+		imgUrlError(e) {
+			e.path[0].src = require('../assets/img/noimg.jpg');
 		},
 		movePage(page) {
 			this.fetchData(page);

@@ -10,7 +10,7 @@ $wide-page: 1024px;
     @media all and (max-width: $wide-page) { @content; }
   }
   @else if $media == mobile {
-    @media all and (min-width: $medium-page) { @content; }
+    @media all and (max-width: $medium-page) { @content; }
   }
   @else if $media == tablet {
     @media all and (min-width: $medium-page + 1) and (max-width: $wide-page) {
