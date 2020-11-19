@@ -54,11 +54,6 @@ input, textarea {
   .logo {
     @include title-txt;
     line-height: initial;
-    span {
-      .ion {
-        color: $color-orange;
-      }
-    }
   }
 }
 .search-box {

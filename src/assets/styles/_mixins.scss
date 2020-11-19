@@ -81,8 +81,8 @@ $wide-page: 1024px;
 
 @mixin gradient-rainbow {
   background-color: $color-light-purple;
-  background: -webkit-linear-gradient(left, $color-red, $color-orange, $color-light-yellow, $color-light-green, $color-blue, $color-light-purple);
-  background: -moz-linear-gradient(left, $color-red, $color-orange, $color-light-yellow, $color-light-green, $color-blue, $color-light-purple);
-  background: -o-linear-gradient(left, $color-red, $color-orange, $color-light-yellow, $color-light-green, $color-blue, $color-light-purple);
-  background: linear-gradient(128deg, $color-red, $color-orange, $color-light-yellow, $color-light-green, $color-blue, $color-light-purple);
+  background: -webkit-linear-gradient(left, rgba(255, 0, 0, 0.5), rgba(255, 50, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5), rgba(100, 0, 255, 0.5));
+  background: -moz-linear-gradient(left, rgba(255, 0, 0, 0.5), rgba(255, 50, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5), rgba(100, 0, 255, 0.5));
+  background: -o-linear-gradient(left, rgba(255, 0, 0, 0.5), rgba(255, 50, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5), rgba(100, 0, 255, 0.5));
+  background: linear-gradient(128deg, rgba(255, 0, 0, 0.5), rgba(255, 50, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5), rgba(100, 0, 255, 0.5));
 }

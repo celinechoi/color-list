@@ -22,6 +22,7 @@ export default {
 		movePage(page) {
 			// 이벤트 부모 컴포넌트로 올리기
 			this.$emit('movePage', page);
+			console.log(page);
 		},
 	},
 };
