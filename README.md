@@ -1,7 +1,10 @@
 # 색상🎨 리스트(Color List)
-Fake data를 axios 통신 하여 리스트 형식으로 데이터 가공
+Fake data를 axios 통신 하여 리스트 형식으로 데이터 가공 했으며,
+해당 연도와 연관 되어 있는 팬톤 컬러까지 함께 볼 수 있다.
 
 데이터 출처 : [REQ|RES](https://reqres.in/).
+
+※이 어플리케이션은 반응형으로 제작되었습니다.
 
 ## Project setup
 ```
