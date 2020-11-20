@@ -38,7 +38,14 @@
 		</ul>
 		<Paging :totalPage="totalPage" @movePage="movePage" />
 		<!-- @movePage는 자식 컴포넌트로 부터 받은 이벤트, "movePage"는 여기 컴포넌트의 메서드 실행. -->
-		<ListPopup></ListPopup>
+		<ListPopup>
+			<template v-slot:popupTitle>
+				<h2>색상 자세히 보기</h2>
+			</template>
+			<template v-slot:popupContent>
+				<div>내용</div>
+			</template>
+		</ListPopup>
 	</div>
 </template>
 

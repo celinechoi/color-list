@@ -1,10 +1,10 @@
 <template>
 	<div class="popup">
 		<div class="popup__inner">
-			<h2 class="popup__title">popup title</h2>
-			<div class="popup__content">
+			<slot class="popup__title" name="popupTitle">popup title</slot>
+			<slot class="popup__content" name="popupContent">
 				popup content
-			</div>
+			</slot>
 		</div>
 	</div>
 </template>
