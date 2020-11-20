@@ -102,17 +102,19 @@ input, textarea {
 
   ul.frame-contents {
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 50%;
     margin: 0 auto;
     li.frame-contents__list {
-      float: left;
       width: calc(100%/3);
       @include border-radius-05;
       a.frame-contents__link {
         display: block;
         overflow: hidden;
         margin: 4%;
-        padding: 10%;
+        padding: 20px 15px;
         border: {
           width: 1px;
           style: solid;
