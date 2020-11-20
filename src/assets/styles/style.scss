@@ -163,10 +163,13 @@ input, textarea {
       margin: auto 8px;
       padding: 1%;
       cursor: pointer;
-      color: $color-medium-gray;
+      color: $color-gray-0-4;
       font: {
         size: 1.2rem;
         weight: 700;
+      }
+      &:first-child {
+        color: $color-black;
       }
     }
   }
