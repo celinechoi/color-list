@@ -1,4 +1,4 @@
-# 색상 리스트(Color List)
+# 색상🎨 리스트(Color List)
 Fake data를 axios 통신 하여 리스트 형식으로 데이터 가공
 
 데이터 출처 : [REQ|RES](https://reqres.in/).
