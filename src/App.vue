@@ -28,6 +28,6 @@ export default {
 @import 'http://fonts.googleapis.com/earlyaccess/notosanskr.css';
 @import '~vue-ionicons/ionicons.scss';
 @import './assets/styles/reset.css';
-@import '@/assets/styles/style.scss';
-@import '@/assets/styles/media_query.scss';
+@import './assets/styles/style.scss';
+@import './assets/styles/media_query.scss';
 </style>

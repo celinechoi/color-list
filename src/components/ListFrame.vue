@@ -53,9 +53,11 @@
 		<Modal v-if="showModal">
 			<template v-slot:modalHeader>
 				<div class="modal-header">
-					<h2>
-						<p>모달타이틀</p>
-						<button @click="showModal = false">닫기</button>
+					<h2 class="modal-headder__title">
+						<p class="modal-header__title-txt">모달타이틀</p>
+						<button class="close-btn" @click="showModal = false">
+							<ios-close-circle-icon></ios-close-circle-icon>
+						</button>
 					</h2>
 				</div>
 			</template>

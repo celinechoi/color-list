@@ -211,66 +211,52 @@ input, textarea {
 }
 
 // ###modal
-.modal-mask {
+#modal-mask {
   position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  display: table;
-  transition: opacity .3s ease;
-}
-
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.modal-container {
-  width: 300px;
-  margin: 0px auto;
-  padding: 20px 30px;
-  background-color: #fff;
+  z-index: 1;
+  bottom: 30px;
+  left: 50%;
   border-radius: 2px;
+  width: 300px;
+  margin-left: -150px;
+  background-color: #000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
+  .modal-header {
+    .modal-headder__title {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      .modal-header__title-txt {
+        color: $color-white;
+        font: {
+          size: 2rem;
+          weight: 700;
+        }
+        line-height: 3rem;
+      }
+    }
+  }
+}
+.close-btn {
+  margin-left: auto;
+  color: $color-white;
+  font-size: 2rem;
+}
+.modal-toast-enter-to {
+  animation: bounce-in .5s reverse;
 }
 
-.modal-header h3 {
-  margin-top: 0;
-  color: #42b983;
+.modal-toast-leave-active {
+  //animation: bounce-in .5s reverse;
 }
 
-.modal-body {
-  margin: 20px 0;
-}
-
-.modal-default-button {
-  float: right;
-}
-
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
-
-.modal-enter {
-  opacity: 0;
-}
-
-.modal-leave-active {
-  opacity: 0;
-}
-
-.modal-enter .modal-container,
-.modal-leave-active .modal-container {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+@keyframes bounce-in {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 50px, 0);
+  }
 }
