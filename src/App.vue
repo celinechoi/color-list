@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import HeaderFrame from './components/HeaderFrame';
-import SearchFrame from './components/SearchFrame';
+import HeaderFrame from './components/common/HeaderFrame';
+import SearchFrame from './components/common/SearchFrame';
 import ListFrame from './components/ListFrame';
-import FooterFrame from './components/FooterFrame';
+import FooterFrame from './components/common/FooterFrame';
 
 export default {
 	name: 'App',
