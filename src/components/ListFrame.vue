@@ -12,7 +12,11 @@
 				v-for="(product, idx) in products"
 				:key="idx"
 			>
-				<a href="javascript:;" class="frame-contents__link">
+				<a
+					href="javascript:;"
+					class="frame-contents__link"
+					@click="showModal = true"
+				>
 					<div class="line-box">
 						<span
 							:style="{ 'background-color': product.color }"
@@ -38,31 +42,47 @@
 		</ul>
 		<Paging :totalPage="totalPage" @movePage="movePage" />
 		<!-- @movePage는 자식 컴포넌트로 부터 받은 이벤트, "movePage"는 여기 컴포넌트의 메서드 실행. -->
-		<ListPopup>
+		<!-- <Modal>
 			<template v-slot:popupTitle>
 				<h2>색상 자세히 보기</h2>
 			</template>
 			<template v-slot:popupContent>
 				<div>내용</div>
 			</template>
-		</ListPopup>
+		</Modal> -->
+		<Modal v-if="showModal">
+			<template v-slot:modalHeader>
+				<div class="modal-header">
+					<h2>
+						<p>모달타이틀</p>
+						<button @click="showModal = false">닫기</button>
+					</h2>
+				</div>
+			</template>
+			<template v-slot:modalContents>
+				<div class="modal-contents">
+					모달컨텐츠
+				</div>
+			</template>
+		</Modal>
 	</div>
 </template>
 
 <script>
 import axios from 'axios';
-import Paging from './Paging';
-import ListPopup from './ListPopup';
+import Paging from './common/Paging';
+import Modal from './common/Modal';
 export default {
 	components: {
 		Paging,
-		ListPopup,
+		Modal,
 	},
 	data() {
 		return {
 			products: null,
 			totalPage: null,
 			pageNum: 1,
+			showModal: false,
 		};
 	},
 	methods: {
